@@ -1,48 +1,58 @@
 import Spline from "@splinetool/react-spline";
+import { Truck, Star } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen w-full overflow-hidden" aria-label="Galaxy Hero">
-      {/* 3D Galaxy Background */}
-      <div className="absolute inset-0">
-        <Spline
-          scene="https://prod.spline.design/er66D6jbuo0hIjmn/scene.splinecode"
-          style={{ width: "100%", height: "100%" }}
-        />
-      </div>
-
-      {/* Soft vignette and glow overlays that don't block interaction */}
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#05030e]/30 via-transparent to-[#05030e]" />
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(600px_300px_at_center,rgba(168,85,247,0.25),transparent_70%)]" />
-
-      {/* Content */}
-      <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl items-center px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl">
-          <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">
-            <span className="h-2 w-2 rounded-full bg-fuchsia-400 animate-pulse" />
-            Live cosmic scene powered by 3D
+    <section className="relative overflow-hidden" aria-label="Hero">
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(600px_300px_at_80%_10%,rgba(244,63,94,0.08),transparent_70%)]" />
+      <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-4 pt-28 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-8 lg:pt-36">
+        <div>
+          <p className="inline-flex items-center gap-2 rounded-full bg-white text-rose-700 ring-1 ring-rose-200 px-3 py-1 text-xs font-medium">
+            <span className="h-2 w-2 rounded-full bg-rose-500" />
+            New: Red Spider Lily Collection
           </p>
-          <h1 className="text-4xl sm:text-6xl md:text-7xl font-black tracking-tight text-white drop-shadow-[0_4px_30px_rgba(168,85,247,0.35)]">
-            Journey through the purple cosmos
+          <h1 className="mt-4 text-4xl font-extrabold leading-[1.1] tracking-tight text-gray-900 sm:text-6xl">
+            Fresh flowers and plants, delivered beautifully
           </h1>
-          <p className="mt-6 text-lg sm:text-xl text-white/80">
-            Drift into a dark, futuristic galaxy lit by a radiant white core. Explore
-            starlit horizons, discover new worlds, and feel the serenity of space.
+          <p className="mt-4 text-lg text-gray-600">
+            Minimal, serene and thoughtfully curated blooms. Clean design, calm vibes,
+            and fast delivery for every occasion.
           </p>
 
-          <div className="mt-8 flex flex-wrap items-center gap-3" id="get-started">
+          <div className="mt-8 flex flex-wrap items-center gap-3">
             <a
-              href="#features"
-              className="rounded-full bg-white/10 px-5 py-3 text-sm font-semibold text-white hover:bg-white/15 border border-white/15 transition"
+              href="#shop"
+              className="rounded-full bg-rose-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-rose-700"
             >
-              Learn More
+              Shop now
             </a>
             <a
-              href="#discover"
-              className="rounded-full bg-gradient-to-r from-fuchsia-500 to-indigo-500 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-fuchsia-500/25 hover:shadow-fuchsia-500/40 transition"
+              href="#about"
+              className="rounded-full border border-gray-200 bg-white px-6 py-3 text-sm font-semibold text-gray-900 hover:bg-gray-50"
             >
-              Enter the Galaxy
+              Learn more
             </a>
+          </div>
+
+          <div className="mt-6 flex items-center gap-6 text-sm text-gray-600">
+            <div className="flex items-center gap-2">
+              <Truck className="h-4 w-4 text-rose-600" />
+              <span>Next‑day delivery</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Star className="h-4 w-4 text-rose-600" />
+              <span>Premium quality</span>
+            </div>
+          </div>
+        </div>
+
+        <div className="relative">
+          <div className="absolute -inset-4 -z-0 pointer-events-none rounded-3xl bg-gradient-to-br from-rose-200 to-rose-100 blur-2xl" />
+          <div className="relative aspect-square w-full overflow-hidden rounded-3xl border border-rose-100 bg-rose-50/50 shadow-lg">
+            <Spline
+              scene="https://prod.spline.design/Tu-wEVxfDuICpwJI/scene.splinecode"
+              style={{ width: "100%", height: "100%" }}
+            />
           </div>
         </div>
       </div>
